@@ -1,0 +1,2 @@
+class OnepageController < ApplicationController
+end
