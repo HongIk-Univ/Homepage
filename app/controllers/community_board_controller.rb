@@ -1,4 +1,6 @@
 class CommunityBoardController < ApplicationController
+  before_action :login_check
+  skip_before_action :login_check, :only => [:show, :cicpost, :imgpost, :freepost, :datapost, :eventpost, :graduatepost, :jobpost]
   def cicpost
   end
 

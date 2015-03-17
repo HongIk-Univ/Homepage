@@ -2,7 +2,7 @@ Cichomepage::Application.routes.draw do
   get "useradd/signup"
   post "useradd/signup_complete"
   get "useradd/login"
-  get "useradd/login_complete"
+  post "useradd/login_complete"
   get "useradd/logout_complete"
   get "equlp_board/post_equlp"
   get "equlp_board/reservation_complete"
