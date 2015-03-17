@@ -1,0 +1,2 @@
+module CommunityBoardHelper
+end
