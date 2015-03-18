@@ -86,9 +86,13 @@
                 </li>
                 </ul>
                  <p class="navbar-text pull-right"><a href="#" class="navbar-link">Contact</a></p>
-                 <p class="navbar-text pull-right"><a href="/signup" class="navbar-link">Signup</a></p>
-                 <p class="navbar-text pull-right"><a href="login" class="navbar-link">Login</a></p>
-            </div>
+                 <% if session[:user_id].nil? %>
+				 <p class="navbar-text pull-right"><a href="/signup" class="navbar-link">Signup</a></p> | <p class="navbar-text pull-right"><a href="login" class="navbar-link">Login</a></p>
+				 <% else %>
+				 <p class="navbar-text pull-right"><a href="/useradd/logout_complete" class="navbar-link">Logout</a></p>
+				 <% end %>
+				 
+				</div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->

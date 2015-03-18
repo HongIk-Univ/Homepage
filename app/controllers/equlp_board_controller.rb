@@ -1,4 +1,6 @@
 class EqulpBoardController < ApplicationController
+  before_action :login_check
+  skip_before_action :login_check, :only => [:post_equlp, :numstatus_complete, :status_complete]
   def post_equlp
   end
 
