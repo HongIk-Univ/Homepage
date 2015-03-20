@@ -31037,3 +31037,9 @@ Started GET "/assets/bootstrap.min.js" for 221.161.23.31 at 2015-03-20 12:48:51 
 
 
 Started GET "/assets/jquery.js" for 221.161.23.31 at 2015-03-20 12:48:51 +0000
+
+
+Started GET "/signup" for 221.161.23.31 at 2015-03-20 12:50:31 +0000
+Processing by UseraddController#signup as HTML
+  Rendered useradd/signup.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
