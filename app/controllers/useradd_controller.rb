@@ -3,10 +3,11 @@ class UseraddController < ApplicationController
   end
 
   def signup_complete
-    user = HomeMember.new
-    user.name = params[:username]
-    if params[:password] == params[:retype_password]
-      user.password = params[:password]
+   if(params[:agree])
+      user = HomeMember.new
+      user.name = params[:username]
+      if params[:password] == params[:retype_password]
+        user.password = params[:password]
       if user.save
         flash[:alert] = "성공적으로 가입되었습니다."
         redirect_to "/signup"
@@ -18,6 +19,10 @@ class UseraddController < ApplicationController
       flash[:alert] = "비밀번호가 맞지 않습니다."
       redirect_to :back
     end
+   else
+     flash[:alert] = "이용약관 동의 바람!"
+     redirect_to :back
+   end       
   end
 
   def login
