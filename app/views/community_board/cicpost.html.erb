@@ -1,6 +1,44 @@
 <div class ="row">
 <%= render :partial => "community_board/contentlayout" %>
-<div class ="span9">
-	<p>cicposts</p>
-</div>
+<div class="panel panel-default">
+        <!-- Default panel contents -->
+        <!--글번호	제 목	작성자	작성일	조회-->
+        <div class="panel-heading"><h4>공지사항</h4></div>
+
+        <!-- Table -->
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>글번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr onclick='location.href="./board_content.html"' style="cursor: pointer;">
+                <th scope="row">1</th>
+                <td>확률 및 불규칙 변수 시간변경</td>
+                <td>관리자</td>
+                <td>2015.03.14</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>과정변경 안내</td>
+                <td>관리자</td>
+                <td>2015.03.14</td>
+                <td>58</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>학과에서 아두이노 대여한 학생은 반납하시기 바랍니다.</td>
+                <td>관리자</td>
+                <td>2015.02.06</td>
+                <td>78</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

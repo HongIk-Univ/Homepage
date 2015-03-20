@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/vendor/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/view/css/index.css">
+
+    <!--[if lt IE 9]>
+    <script src="../assets/vendor/js/html5shiv.min.js"></script>
+    <script src="../assets/vendor/js/respond.min.js"></script>
+    <![endif]-->
+    <title>컴퓨터정보통신공학과</title>
+</head>
+<body>
+<div class="container">
+    <!-- Static navbar -->
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">컴퓨터정보통신공학과</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">학과소개</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">학과장인사말</a></li>
+                        <li><a href="#">학과역사</a></li>
+                        <li><a href="#">학과소개</a></li>
+                        <li><a href="#">교육목표</a></li>
+                        <li><a href="#">교육목표 수립 및 절차</a></li>
+                        <li><a href="#">취업분야 및 취업률</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">교과과정</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">교과과정</a></li>
+                        <li><a href="#">설계/대체 교과목</a></li>
+                        <li><a href="#">전공/인증필수</a></li>
+                        <li><a href="#">전공 교과목개요</a></li>
+                        <li><a href="#">공학인증 졸업기준</a></li>
+                        <li><a href="#">이수체계도</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">구성원</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">교수소개</a></li>
+                        <li><a href="#">조교소개</a></li>
+                        <li><a href="#">학생회소개</a></li>
+                        <li><a href="#">과대표소개</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">커뮤니티</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./board_template.html">공지사항</a></li>
+                        <li><a href="#">취업게시판</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">행사/공모전</a></li>
+                        <li><a href="#">사진게시판</a></li>
+                        <li><a href="#">자료실</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">대학원</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">통신 신호처리 실험실</a></li>
+                        <li><a href="#">유비쿼터스 네트워크/컨버전스</a></li>
+                        <li><a href="#">소프트웨어공학 실험실</a></li>
+                        <li><a href="#">인터넷 실험실</a></li>
+                        <li><a href="#">광대역 융합 네트워크 실험실</a></li>
+                        <li><a href="#">정보보호 및 로보틱스 연구실</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="./login.html">로그인</a></li>
+                <li><a href="./signup.html">회원가입</a></li>
+                <li><a href="../navbar-fixed-top/">장비렌탈</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+    <div class="list-group">
+        <a href="./board_template.html" class="list-group-item active">공지사항</a>
+        <a href="#" class="list-group-item">취업게시판</a>
+        <a href="#" class="list-group-item">자유게시판</a>
+        <a href="#" class="list-group-item">행사/공모전</a>
+        <a href="#" class="list-group-item">사진게시판</a>
+        <a href="#" class="list-group-item">자료실</a>
+    </div>
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <!--글번호	제 목	작성자	작성일	조회-->
+        <div class="panel-heading"><h4>공지사항</h4></div>
+
+        <!-- Table -->
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>글번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr onclick='location.href="./board_content.html"' style="cursor: pointer;">
+                <th scope="row">1</th>
+                <td>확률 및 불규칙 변수 시간변경</td>
+                <td>관리자</td>
+                <td>2015.03.14</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>과정변경 안내</td>
+                <td>관리자</td>
+                <td>2015.03.14</td>
+                <td>58</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>학과에서 아두이노 대여한 학생은 반납하시기 바랍니다.</td>
+                <td>관리자</td>
+                <td>2015.02.06</td>
+                <td>78</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript" src="../assets/vendor/js/jQuery.js"></script>
+<script type="text/javascript" src="../assets/vendor/js/bootstrap.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>

@@ -1,23 +1,20 @@
 <div class="container">
-  <% if !flash[:alert].nil? %>
+	<% if !flash[:alert].nil? %>
   <div class="alert alert-danger">
     <%= flash[:alert] %>
   </div>
   <% end %>
-
-  <div class="row">
-    <div class="col-md-4">
-    </div>
-    <div class="col-md-4 text-center">
-      <h3 class="form-heading">로그인</h3>
-
-      <form action="/useradd/login_complete" method="post">
-        <p><input class="form-input" type="text" name="username" placeholder="아이디"></p>
-        <p><input class="form-input" type="password" name="password" placeholder="비밀번호"></p>
-        <input class="btn btn-lg btn-block" type="submit" value="로그인">
-      </form>
-    </div>
-    <div class="col-md-4">
-    </div>
-  </div>
+<form class="form-signin" action="/useradd/login_complete" method="post">
+        <h2 class="form-signin-heading">로그인</h2>
+        <label class="sr-only">아이디(학번)</label>
+        <input type="text" name="school_num" class="form-control" placeholder="아이디(학번)" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">비밀번호</label>
+        <input type="password" name="password" class="form-control" placeholder="비밀번호" required="">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me"> 기억하기
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">로그인</button>
+</form>
 </div>

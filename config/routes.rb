@@ -4,7 +4,7 @@ Cichomepage::Application.routes.draw do
   get "useradd/login"
   post "useradd/login_complete"
   get "useradd/logout_complete"
-  get "equlp_board/post_equlp"
+  get "/equlp" => 'equlp_board#post_equlp'
   get "equlp_board/reservation_complete"
   get "equlp_board/numstatus_complete"
   get "equlp_board/status_complete"
@@ -22,7 +22,7 @@ Cichomepage::Application.routes.draw do
   get "/signup" => 'useradd#signup'
   get "community_board/posts"
   get "community_board/show"
-  get "community_board/write"
+  post "community_board/write"
   get "community_board/edit"
   get "community_board/write_complete"
   get "community_board/edit_complete"

@@ -6,6 +6,7 @@ class CreateHomeMembers < ActiveRecord::Migration
       t.integer :fk_labID
       t.string :password
       t.string :profile_img
+      t.string :schoolnum
       t.string :name
       t.string :email
       t.string :mobile
