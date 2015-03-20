@@ -5,12 +5,15 @@ class UseraddController < ApplicationController
   def signup_complete
    if(params[:agree])
       user = HomeMember.new
+      user.schoolnum = params[:school_num]
       user.name = params[:username]
+      user.email= params[:inputEmail]
+      user.mobile = params[:inputPhone]
       if params[:password] == params[:retype_password]
         user.password = params[:password]
       if user.save
         flash[:alert] = "성공적으로 가입되었습니다."
-        redirect_to "/signup"
+        redirect_to "/"
       else
         flash[:alert] = user.errors.values.flatten.join(' ')
         redirect_to :back
@@ -29,12 +32,12 @@ class UseraddController < ApplicationController
   end
 
   def login_complete
-   user = HomeMember.where(name: params[:username])[0]
+   user = HomeMember.where(schoolnum: params[:school_num])[0]
     if user.nil?
      flash[:alert] = "아이디 또는 비밀번호를 잘못 입력하셨습니다."
      redirect_to :back
     elsif user.password != params[:password]
-     flash[:alert] = "아이디 또는 비밀번호를 잘못 입력하셨습니다."
+     flash[:alert] = "아이디 또는 비밀번호를 잘못 입력하셨습니다.1"
      redirect_to :back
     else
      session[:user_id] = user.id

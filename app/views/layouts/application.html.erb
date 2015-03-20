@@ -1,102 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cichome</title>
+  <title>컴퓨터정보통신공학과</title>
+  <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", "bootstrap", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track", "jquery", "bootstrap" => true %>
   <%= csrf_meta_tags %>
+  <link href="assets/index.css.scss" rel="stylesheet">
+
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">CICLOGO</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                <li class="dropdown">
-                  <a href="/introduction/Greetings" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">학과소개 <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/Greetings">학과장 인사말</a></li>
-                    <li><a href="/History">학과역사</a></li>
-                    <li><a href="/Introduction">학과소개</a></li>
-                    <li><a href="/Goals">교육목표</a></li>
-                    <li><a href="/Procedure">교육목표 수립 및 절차</a></li>
-                    <li><a href="/Employment">취업분야 및 취업률</a></li>
-                  </ul>
-                </li>
-                    <li class="dropdown">
-                  <a href="/curriculum/Curriculum" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">교과과정 <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/Curriculum">교과과정</a></li>
-                    <li><a href="/Courses">설계/대체 교과목</a></li>
-                    <li><a href="/Required">전공/인증 필수</a></li>
-                    <li><a href="/Summary">전공교과목 개요</a></li>
-                    <li><a href="/Standard">공학인증 졸업기준</a></li>
-                    <li><a href="/SysGraph">이수체계도</a></li>
-                  </ul>
-                </li>
-
-                <li class="dropdown">
-                  <a href="/members/Professor" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">구성원 <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/Professor">교수소개</a></li>
-                    <li><a href="/Assistant">조교소개</a></li>
-                    <li><a href="/Student">학생회소개</a></li>
-                    <li><a href="/Representative">과대표소개</a></li>
-                  </ul>
-                </li>
-
-                <li class="dropdown">
-                  <a href="/majorposts" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">커뮤니티 <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/cicposts">학과공지</a></li>
-                    <li><a href="/imgposts">사진게시판</a></li>
-                    <li><a href="/freeposts">자유게시판</a></li>
-                    <li><a href="/dataposts">자료실</a></li>
-                    <li><a href="/eventposts">행사/공모전</a></li>
-                    <li><a href="/graduateposts">졸업게시판</a></li>
-                    <li><a href="/jobposts">취업게시판</a></li>
-                    <li><a href="/faqposts">FAQ</a></li>
-                  </ul>
-                </li>
-                
-                <li><a href="/equlp">장비렌탈</a></li>
-                
-                <li class="dropdown">
-                  <a href="/laboratory/Signal_lab" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">대학원 <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/Signal_lab">통신 신호처리 실험실</a></li>
-                    <li><a href="/Ubiquitous_lab">유비쿼터스 네트워크/컨버전스</a></li>
-                    <li><a href="/Software_lab">소프트웨어공학 실험실</a></li>
-                    <li><a href="/Internet_lab">인터넷 실험실</a></li>
-                    <li><a href="/Network_lab">광대역 융합 네트워크 실험실</a></li>
-                    <li><a href="/Robotics_lab">정보보호 및 로보틱스 연구실</a></li>
-                  </ul>
-                </li>
-                </ul>
-                 <p class="navbar-text pull-right"><a href="#" class="navbar-link">Contact</a></p>
-                 <% if session[:user_id].nil? %>
-				 <p class="navbar-text pull-right"><a href="/signup" class="navbar-link">Signup</a></p> | <p class="navbar-text pull-right"><a href="login" class="navbar-link">Login</a></p>
-				 <% else %>
-				 <p class="navbar-text pull-right"><a href="/useradd/logout_complete" class="navbar-link">Logout</a></p>
-				 <% end %>
-				 
-				</div>
-            <!-- /.navbar-collapse -->
+   <div class="container">
+    <!-- Static navbar -->
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" >
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">컴퓨터정보통신공학과</a>
         </div>
-        <!-- /.container -->
-    </nav>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">학과소개</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/Greetings">학과장인사말</a></li>
+                        <li><a href="/History">학과역사</a></li>
+                        <li><a href="/Introduction">학과소개</a></li>
+                        <li><a href="/Goals">교육목표</a></li>
+                        <li><a href="/Procedure">교육목표 수립 및 절차</a></li>
+                        <li><a href="/Employment">취업분야 및 취업률</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">교과과정</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/Curriculum">교과과정</a></li>
+                        <li><a href="/Courses">설계/대체 교과목</a></li>
+                        <li><a href="/Required">전공/인증필수</a></li>
+                        <li><a href="/Summary">전공 교과목개요</a></li>
+                        <li><a href="/Standard">공학인증 졸업기준</a></li>
+                        <li><a href="/SysGraph">이수체계도</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">구성원</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/Professor">교수소개</a></li>
+                        <li><a href="/Assistant">조교소개</a></li>
+                        <li><a href="/Student">학생회소개</a></li>
+                        <li><a href="/Representative">과대표소개</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">커뮤니티</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/cicposts">공지사항</a></li>
+                        <li><a href="/jobposts">취업게시판</a></li>
+                        <li><a href="/freeposts">자유게시판</a></li>
+                        <li><a href="/eventposts">행사/공모전</a></li>
+                        <li><a href="/imgposts">사진게시판</a></li>
+                        <li><a href="/dataposts">자료실</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">대학원</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/Signal_lab">통신 신호처리 실험실</a></li>
+                        <li><a href="/Ubiquitous_lab">유비쿼터스 네트워크/컨버전스</a></li>
+                        <li><a href="/Software_lab">소프트웨어공학 실험실</a></li>
+                        <li><a href="/Internet_lab">인터넷 실험실</a></li>
+                        <li><a href="/Network_lab">광대역 융합 네트워크 실험실</a></li>
+                        <li><a href="/Robotics_lab">정보보호 및 로보틱스 연구실</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <% if session[:user_id].nil? %>
+				 <li><a href="/login">로그인</a></li>
+				 <li><a href="/signup">회원가입</a><li>
+				 <% else %>
+				 <li><a href="/useradd/logout_complete">Logout</a></li>
+				 <% end %>
+                <li><a href="/equlp">장비렌탈</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
 
 <%= yield %>
 

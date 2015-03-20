@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20150311160216) do
     t.integer  "fk_labID"
     t.string   "password"
     t.string   "profile_img"
+    t.string   "schoolnum"
     t.string   "name"
     t.string   "email"
     t.string   "mobile"

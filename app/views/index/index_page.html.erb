@@ -31,96 +31,147 @@
 </head>
 
 <body>
-    <!-- Page Content -->
-    <div class="container">
-
-        <!-- Jumbotron Header -->
-        <header class="jumbotron hero-spacer">
-            <h1>IMG Changing~</h1>
-        </header>
-
-        <hr>
-        <!-- Title -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h3>알림판</h3>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Page Features -->
-        <div class="row text-center">
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <div class="caption">
-                        <h3>학과공지</h3>
-                       
-                        <h5>title<h4>
-                        	<h6>content</h5>
-                        <p>
-                           <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <div class="caption">
-                        <h3>취업게시판</h3>
-                        
-                        <h5>title</h5>
-                        <h6>content</h6>
-                        <p>
-                            <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <div class="caption">
-                        <h3>행사공모전</h3>
-                        
-                        <h5>title</h5>
-                        <h6>contnet</h6>
-                        <p>
-                            <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <div class="caption">
-                        <h3>잘한거 자랑</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>
-                            <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; HongikAC_by Seungwan JO</p>
-                </div>
-            </div>
-        </footer>
-
+	<% if !flash[:alert].nil? %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+  <% end %>
+    <!--공지사항-->
+    <div class="page-header">
+        <h3>공지사항</h3>
     </div>
-    <!-- /.container -->
+    <div class="row">
+        <div class="col-sm-10 col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>확률 및 불규칙 변수 시간변경 </br><small>2015-03-04</small></h4>
+                    <p>2015-1학기에 개설되는 확률 및 불규칙 변수(지인호 교수님) 시간표가 아래와 같이 변경되었으니, 수강신청에 참고바랍니다</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>과정변경 안내 </br><small>2015-03-04</small></h4>
+                    <p>아래와 같이 심화과정에서 일반과정으로 과정변경을 진행합니다.기한에 맞추어 신청서를 제출하시기 바랍니다.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>아두이노 반납 </br><small>2015-02-06</small></h4>
+                    <p>학과에서 아두이노 대여한 학생은 반납하시기 바랍니다.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>2015년 2월 졸업예정자 </br><small>2014-11-27</small></h4>
+                    <p>*2015년 2월 졸업예정자 중 졸업유예를 신청할 학생은 첨부의 졸업불가 사유서를 작성하여, 12.12(금) 17시까지 학과사무실로 제출하시면 됩니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--취업게시판-->
+    <div class="page-header">
+        <h3>취업게시판</h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-10 col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <a href="#" >
+                    <h4>SKT채용설명회 </br><small>2014-08-14</small></h4>
+                    <p>SKT 채용브랜드 It's You 멘토링 설명회
+                        일시 : 8.18(월) 14:00~18:00
+                        장소 : 을지로 SKT T타워
+                        대상 : 하반기 취업가능자 (기 졸업자 포함)
+                        내용 : IT/SW 우수인재를 위한 하반기 SKT 채용프로그램 'IT's You' 에 여러분들을 초청합니다.
+                        우수 참가자에게 서류전형합격, 면접직행패스 등 하반기 채용을 위한
+                        여러가지 혜택을 제공하고 있으니 많은 참가 부탁드립니다.
+                        문의사항이나 참가를 희망하는 분들은 운영사무국 010-9525-8549 (담당자 우병조)로
+                        연락바랍니다.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>과정변경 안내 </br><small>2015-03-04</small></h4>
+                    <p>아래와 같이 심화과정에서 일반과정으로 과정변경을 진행합니다.기한에 맞추어 신청서를 제출하시기 바랍니다.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>아두이노 반납 </br><small>2015-02-06</small></h4>
+                    <p>학과에서 아두이노 대여한 학생은 반납하시기 바랍니다.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>2015년 2월 졸업예정자 </br><small>2014-11-27</small></h4>
+                    <p>*2015년 2월 졸업예정자 중 졸업유예를 신청할 학생은 첨부의 졸업불가 사유서를 작성하여, 12.12(금) 17시까지 학과사무실로 제출하시면 됩니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--알림판-->
+    <div class="page-header">
+        <h3>알림판</h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-10 col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <a href="#" >
+                        <h4>SKT채용설명회 </br><small>2014-08-14</small></h4>
+                        <p>SKT 채용브랜드 It's You 멘토링 설명회
+                            일시 : 8.18(월) 14:00~18:00
+                            장소 : 을지로 SKT T타워
+                            대상 : 하반기 취업가능자 (기 졸업자 포함)
+                            내용 : IT/SW 우수인재를 위한 하반기 SKT 채용프로그램 'IT's You' 에 여러분들을 초청합니다.
+                            우수 참가자에게 서류전형합격, 면접직행패스 등 하반기 채용을 위한
+                            여러가지 혜택을 제공하고 있으니 많은 참가 부탁드립니다.
+                            문의사항이나 참가를 희망하는 분들은 운영사무국 010-9525-8549 (담당자 우병조)로
+                            연락바랍니다.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>과정변경 안내 </br><small>2015-03-04</small></h4>
+                    <p>아래와 같이 심화과정에서 일반과정으로 과정변경을 진행합니다.기한에 맞추어 신청서를 제출하시기 바랍니다.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>아두이노 반납 </br><small>2015-02-06</small></h4>
+                    <p>학과에서 아두이노 대여한 학생은 반납하시기 바랍니다.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>2015년 2월 졸업예정자 </br><small>2014-11-27</small></h4>
+                    <p>*2015년 2월 졸업예정자 중 졸업유예를 신청할 학생은 첨부의 졸업불가 사유서를 작성하여, 12.12(금) 17시까지 학과사무실로 제출하시면 됩니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- /container -->
 
 </body>
 
