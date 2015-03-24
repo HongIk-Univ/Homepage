@@ -13,6 +13,8 @@ class UseraddController < ApplicationController
         user.password = params[:password]
       if user.save
         flash[:alert] = "성공적으로 가입되었습니다."
+		user = HomeMember.where(schoolnum: params[:school_num])[0]        
+		session[:user_id] = user.id
         redirect_to "/"
       else
         flash[:alert] = user.errors.values.flatten.join(' ')
