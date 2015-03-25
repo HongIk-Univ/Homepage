@@ -11,4 +11,3 @@ MemberType.create(name:'재학생',status:0)
 MemberType.create(name:'졸업생',status:0)
 MemberType.create(name:'교수',status:0)
 MemberType.create(name:'기타',status:0)
-
