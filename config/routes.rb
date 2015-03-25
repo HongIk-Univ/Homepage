@@ -1,4 +1,5 @@
 Cichomepage::Application.routes.draw do
+  ActiveAdmin.routes(self)
   get "useradd/signup"
   post "useradd/signup_complete"
   get "useradd/login"

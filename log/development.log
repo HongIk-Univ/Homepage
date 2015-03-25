@@ -47745,3 +47745,135 @@ Migrating to CreateBoards (20150325024255)
   [1m[36m (14.1ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36mBoard Load (2.4ms)[0m  [1mSELECT "boards".* FROM "boards"[0m
+
+
+Started GET "/" for 203.226.207.6 at 2015-03-25 18:39:00 +0900
+Processing by IndexController#index_page as HTML
+  Rendered index/index_page.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/board_content.css?body=1" for 203.226.207.6 at 2015-03-25 18:39:00 +0900
+
+
+Started GET "/assets/index.css?body=1" for 203.226.207.6 at 2015-03-25 18:39:00 +0900
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 203.226.207.6 at 2015-03-25 18:39:00 +0900
+
+
+Started GET "/assets/signup.css?body=1" for 203.226.207.6 at 2015-03-25 18:39:00 +0900
+
+
+Started GET "/assets/application.css?body=1" for 203.226.207.6 at 2015-03-25 18:39:00 +0900
+
+
+Started GET "/assets/login.css?body=1" for 203.226.207.6 at 2015-03-25 18:39:00 +0900
+
+
+Started GET "/assets/jquery.min.js?body=1" for 203.226.207.6 at 2015-03-25 18:39:00 +0900
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 203.226.207.6 at 2015-03-25 18:39:00 +0900
+
+
+Started GET "/assets/application.js?body=1" for 203.226.207.6 at 2015-03-25 18:39:00 +0900
+
+
+Started GET "/favicon.ico" for 203.226.207.6 at 2015-03-25 18:39:05 +0900
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/madist/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/madist/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/madist/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/madist/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/madist/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.5ms)
+  Rendered /home/madist/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /home/madist/.rvm/gems/ruby-2.2.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (61.0ms)
+
+
+Started GET "/login" for 203.226.207.6 at 2015-03-25 18:39:11 +0900
+Processing by UseraddController#login as HTML
+  Rendered useradd/login.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 203.226.207.6 at 2015-03-25 18:39:14 +0900
+Processing by UseraddController#signup as HTML
+  Rendered useradd/signup.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 203.226.207.6 at 2015-03-25 18:39:17 +0900
+Processing by IndexController#index_page as HTML
+  Rendered index/index_page.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateActiveAdminComments (20150325101033)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar(255), "body" text, "resource_id" varchar(255) NOT NULL, "resource_type" varchar(255) NOT NULL, "author_id" integer, "author_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.3ms)[0m  CREATE INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.2ms)[0m  CREATE INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150325101033"]]
+  [1m[35m (15.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (12.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (13.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMembers (20150311160132)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "pkid" varchar(255), "device_token" varchar(255), "password" varchar(255), "lost_password" varchar(255), "profile_img" varchar(255), "name" varchar(255), "email" varchar(255), "mobile" varchar(255), "birth" date, "member_type_id" integer, "level" integer, "status" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150311160132"]]
+  [1m[36m (12.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateMemberTypes (20150324114255)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "member_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "status" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150324114255"]]
+  [1m[36m (13.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBoardTypes (20150325024223)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "board_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "status" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150325024223"]]
+  [1m[36m (14.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBoardSubTypes (20150325024234)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "board_sub_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "board_type_id" integer, "title" varchar(255), "status" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150325024234"]]
+  [1m[36m (13.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBoards (20150325024255)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "boards" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "member_id" varchar(255), "board_type_id" integer, "board_sub_type_id" integer, "date" datetime, "title" varchar(255), "text" text, "read_count" integer, "comment_count" integer, "down_count" integer, "like_count" integer, "attachment" varchar(255), "img_cover" varchar(255), "img_thumbnail" varchar(255), "status" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150325024255"]]
+  [1m[36m (13.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateActiveAdminComments (20150325101033)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar(255), "body" text, "resource_id" varchar(255) NOT NULL, "resource_type" varchar(255) NOT NULL, "author_id" integer, "author_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.5ms)[0m  CREATE INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")
+  [1m[36m (0.4ms)[0m  [1mCREATE INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.4ms)[0m  CREATE INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150325101033"]]
+  [1m[35m (15.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
