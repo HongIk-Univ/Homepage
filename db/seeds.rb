@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+# ruby encoding: utf-8
+
+MemberType.create(name:'재학생',status:0)
+MemberType.create(name:'졸업생',status:0)
+MemberType.create(name:'교수',status:0)
+MemberType.create(name:'기타',status:0)
+

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150311160216) do
+ActiveRecord::Schema.define(version: 20150324114255) do
 
   create_table "home_boards", force: true do |t|
     t.integer  "pkid"
@@ -45,30 +45,35 @@ ActiveRecord::Schema.define(version: 20150311160216) do
     t.datetime "updated_at"
   end
 
-  create_table "home_members", force: true do |t|
-    t.string   "pkid"
-    t.string   "devic_token"
-    t.integer  "fk_labID"
-    t.string   "password"
-    t.string   "profile_img"
-    t.string   "schoolnum"
-    t.string   "name"
-    t.string   "email"
-    t.string   "mobile"
-    t.date     "birth"
-    t.integer  "type"
-    t.integer  "level"
-    t.integer  "status"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "home_reservations", force: true do |t|
     t.integer  "pkid"
     t.string   "fk_reserverID"
     t.integer  "fk_equlpID"
     t.date     "start_date"
     t.date     "end_date"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "member_types", force: true do |t|
+    t.string   "name"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "members", force: true do |t|
+    t.string   "pkid"
+    t.string   "device_token"
+    t.string   "password"
+    t.string   "profile_img"
+    t.string   "name"
+    t.string   "email"
+    t.string   "mobile"
+    t.date     "birth"
+    t.integer  "member_type_id"
+    t.integer  "level"
     t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"

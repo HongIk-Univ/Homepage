@@ -4,8 +4,8 @@ class UseraddController < ApplicationController
 
   def signup_complete
    if(params[:agree])
-      user = HomeMember.new
-      user.schoolnum = params[:school_num]
+      user = Member.new
+      user.pkid = params[:school_num]
       user.name = params[:username]
       user.email= params[:inputEmail]
       user.mobile = params[:inputPhone]
@@ -32,7 +32,7 @@ class UseraddController < ApplicationController
   end
 
   def login_complete
-   user = HomeMember.where(schoolnum: params[:school_num])[0]
+   user = Member.where(pkid: params[:school_num])[0]
     if user.nil?
      flash[:alert] = "아이디 또는 비밀번호를 잘못 입력하셨습니다."
      redirect_to :back
