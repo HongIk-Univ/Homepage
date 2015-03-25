@@ -11,7 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150324114255) do
+ActiveRecord::Schema.define(version: 20150325024255) do
+
+  create_table "board_sub_types", force: true do |t|
+    t.integer  "board_type_id"
+    t.string   "title"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "board_types", force: true do |t|
+    t.string   "title"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "boards", force: true do |t|
+    t.string   "member_id"
+    t.integer  "board_type_id"
+    t.integer  "board_sub_type_id"
+    t.datetime "date"
+    t.string   "title"
+    t.text     "text"
+    t.integer  "read_count"
+    t.integer  "comment_count"
+    t.integer  "down_count"
+    t.integer  "like_count"
+    t.string   "attachment"
+    t.string   "img_cover"
+    t.string   "img_thumbnail"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "member_types", force: true do |t|
     t.string   "name"
