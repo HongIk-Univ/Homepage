@@ -6,14 +6,14 @@ class ApplicationController < ActionController::Base
   def login_check
     @current_user = nil
     if !session[:user_id].nil?
-      @current_user = HomeMember.find(session[:user_id])
+      @current_user = Member.find(session[:user_id])
     else
       redirect_to "/useradd/login"
     end
   end 
   
   def rowsPerPage
-    @rowsPerPage ||=2
+    @rowsPerPage ||=5
   end
    
 end

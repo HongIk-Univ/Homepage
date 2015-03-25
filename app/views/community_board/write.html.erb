@@ -1,15 +1,8 @@
-<div class="container">
-  <% if !flash[:alert].nil? %>
-  <div class="alert alert-danger">
-    <%= flash[:alert] %>
-  </div>
-  <% end %>
-
   <div class="row">
     <div class="col-md-4">
     </div>
     <div class="col-md-4 text-center">
-      <h3>맛집 추가하기</h3>
+      <h3>글쓰기~~</h3>
 
       <form action="/community_board/write_complete" method="post" enctype="multipart/form-data">
         <p>+ 분류
@@ -22,6 +15,7 @@
         </select></p>
         <p><input type="text" name="post_title" placeholder="제목을 입력하세요."></p>
         <p><textarea name="post_content" placeholder="내용을 입력하세요."></textarea></p>
+        <input type="submit" value="추가하기">
       </form>
     </div>
     <div class="col-md-4">
