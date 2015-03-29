@@ -11,12 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150325024255) do
-
-  create_table "board_sub_types", force: true do |t|
-    t.string   "board_type_id"
-=======
 ActiveRecord::Schema.define(version: 20150325101033) do
 
   create_table "active_admin_comments", force: true do |t|
@@ -35,8 +29,7 @@ ActiveRecord::Schema.define(version: 20150325101033) do
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
 
   create_table "board_sub_types", force: true do |t|
-    t.integer  "board_type_id"
->>>>>>> master
+    t.string   "board_type_id"
     t.string   "title"
     t.integer  "status"
     t.datetime "created_at"
@@ -52,20 +45,16 @@ ActiveRecord::Schema.define(version: 20150325101033) do
 
   create_table "boards", force: true do |t|
     t.string   "member_id"
-<<<<<<< HEAD
     t.string   "writer"
     t.string   "board_type_id"
-=======
-    t.integer  "board_type_id"
->>>>>>> master
     t.integer  "board_sub_type_id"
     t.datetime "date"
     t.string   "title"
     t.text     "text"
     t.integer  "read_count",        default: 0
-    t.integer  "comment_count"
-    t.integer  "down_count"
-    t.integer  "like_count"
+    t.integer  "comment_count",     default: 0
+    t.integer  "down_count",        default: 0
+    t.integer  "like_count",        default: 0
     t.string   "attachment"
     t.string   "img_cover"
     t.string   "img_thumbnail"
