@@ -14,21 +14,51 @@ class CommunityBoardController < ApplicationController
   end
 
   def freepost
+    dc=Board.where(board_type_id: "freeposts")
+    @boardList=dc.find(:all, :limit =>rowsPerPage, :order=>'created_at desc')
+    @totalCnt = dc.all.count
+    @current_page =1
+    @totalPageList=getTotalPageList(@totalCnt, rowsPerPage)
   end
 
   def datapost
+    dc=Board.where(board_type_id: "dataposts")
+    @boardList=dc.find(:all, :limit =>rowsPerPage, :order=>'created_at desc')
+    @totalCnt = dc.all.count
+    @current_page =1
+    @totalPageList=getTotalPageList(@totalCnt, rowsPerPage)
   end
 
   def eventpost
+    dc=Board.where(board_type_id: "eventposts")
+    @boardList=dc.find(:all, :limit =>rowsPerPage, :order=>'created_at desc')
+    @totalCnt = dc.all.count
+    @current_page =1
+    @totalPageList=getTotalPageList(@totalCnt, rowsPerPage)
   end
 
   def graduatepost
+    dc=Board.where(board_type_id: "graduateposts")
+    @boardList=dc.find(:all, :limit =>rowsPerPage, :order=>'created_at desc')
+    @totalCnt = dc.all.count
+    @current_page =1
+    @totalPageList=getTotalPageList(@totalCnt, rowsPerPage)
   end
 
   def jobpost
+    dc=Board.where(board_type_id: "jobposts")
+    @boardList=dc.find(:all, :limit =>rowsPerPage, :order=>'created_at desc')
+    @totalCnt = dc.all.count
+    @current_page =1
+    @totalPageList=getTotalPageList(@totalCnt, rowsPerPage)
   end
 
   def faqpost
+    dc=Board.where(board_type_id: "faqposts")
+    @boardList=dc.find(:all, :limit =>rowsPerPage, :order=>'created_at desc')
+    @totalCnt = dc.all.count
+    @current_page =1
+    @totalPageList=getTotalPageList(@totalCnt, rowsPerPage)
   end
 
   def posts

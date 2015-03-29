@@ -12,6 +12,10 @@ class ApplicationController < ActionController::Base
     end
   end 
   
+  def rowsPerPageIndex
+    @rowsPerPage ||=4
+  end
+  
   def rowsPerPage
     @rowsPerPage ||=5
   end
