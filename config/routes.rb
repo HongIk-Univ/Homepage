@@ -1,5 +1,11 @@
 Cichomepage::Application.routes.draw do
+<<<<<<< HEAD
+  get "community_board/viewWork"
+  get "community_board/edit/:id" => 'community_board#edit'
+  get "community_board/delete_complete/:id" => 'community_board#delete_complete'
+=======
   ActiveAdmin.routes(self)
+>>>>>>> master
   get "useradd/signup"
   post "useradd/signup_complete"
   get "useradd/login"
@@ -21,14 +27,17 @@ Cichomepage::Application.routes.draw do
   get "/freeposts" => 'community_board#freepost'
   get "/login" => 'useradd#login'
   get "/signup" => 'useradd#signup'
+  get "/listSpecificPageWork"=> 'community_board#listSpecificPageWork'
   get "community_board/posts"
   get "community_board/show"
-  post "community_board/write"
+  get "community_board/write"
   get "community_board/edit"
-  get "community_board/write_complete"
-  get "community_board/edit_complete"
+  get "/viewWork" => 'community_board#viewWork'
+  post "community_board/write_complete"
+  post "community_board/edit_complete"
   get "community_board/delete_complete"
   get "community_board/posts_complete"
+  get "/write" => 'community_board#write'
   get "/Greetings" => 'onepage#greetings'
   get "/History" => 'onepage#history'
   get "/Introduction" => 'onepage#introduction'
