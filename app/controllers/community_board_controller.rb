@@ -1,50 +1,83 @@
 class CommunityBoardController < ApplicationController
   before_action :login_check
   skip_before_action :login_check, :only => [:show, :cicpost, :imgpost, :freepost, :datapost, :eventpost, :graduatepost, :jobpost]
+  include ApplicationHelper
   def cicpost
+    dc=Board.where(board_type_id: "cicposts")
+    @boardList=dc.find(:all, :limit =>rowsPerPage, :order=>'created_at desc')
+    @totalCnt = dc.all.count
+    @current_page =1
+    @totalPageList=getTotalPageList(@totalCnt, rowsPerPage)
   end
 
   def imgpost
   end
 
   def freepost
+    dc=Board.where(board_type_id: "freeposts")
+    @boardList=dc.find(:all, :limit =>rowsPerPage, :order=>'created_at desc')
+    @totalCnt = dc.all.count
+    @current_page =1
+    @totalPageList=getTotalPageList(@totalCnt, rowsPerPage)
   end
 
   def datapost
+    dc=Board.where(board_type_id: "dataposts")
+    @boardList=dc.find(:all, :limit =>rowsPerPage, :order=>'created_at desc')
+    @totalCnt = dc.all.count
+    @current_page =1
+    @totalPageList=getTotalPageList(@totalCnt, rowsPerPage)
   end
 
   def eventpost
+    dc=Board.where(board_type_id: "eventposts")
+    @boardList=dc.find(:all, :limit =>rowsPerPage, :order=>'created_at desc')
+    @totalCnt = dc.all.count
+    @current_page =1
+    @totalPageList=getTotalPageList(@totalCnt, rowsPerPage)
   end
 
   def graduatepost
+    dc=Board.where(board_type_id: "graduateposts")
+    @boardList=dc.find(:all, :limit =>rowsPerPage, :order=>'created_at desc')
+    @totalCnt = dc.all.count
+    @current_page =1
+    @totalPageList=getTotalPageList(@totalCnt, rowsPerPage)
   end
 
   def jobpost
+    dc=Board.where(board_type_id: "jobposts")
+    @boardList=dc.find(:all, :limit =>rowsPerPage, :order=>'created_at desc')
+    @totalCnt = dc.all.count
+    @current_page =1
+    @totalPageList=getTotalPageList(@totalCnt, rowsPerPage)
   end
 
   def faqpost
+    dc=Board.where(board_type_id: "faqposts")
+    @boardList=dc.find(:all, :limit =>rowsPerPage, :order=>'created_at desc')
+    @totalCnt = dc.all.count
+    @current_page =1
+    @totalPageList=getTotalPageList(@totalCnt, rowsPerPage)
   end
 
   def posts
   end
-
-  def show
-  end
-
-  def write
-  end
-
+  
   def edit
+    @post = Board.find(params[:id])
   end
-
+    
   def write_complete
-    post = HomeBoard.new
-    post.fk_memberID = params[:post_category]
+    post = Board.new
+    c = Member.where(id:session[:user_id])[0]
+    post.writer=c.name
+    post.board_type_id = params[:post_category]
     post.title = params[:post_title]
     post.text = params[:post_content]
     if post.save
       flash[:alert] = "저장되었습니다."
-      redirect_to "/:post_category"
+      redirect_to "/#{post.board_type_id}"
     else
       flash[:alert] = post.errors.values.flatten.join(' ')
       redirect_to :back
@@ -52,11 +85,36 @@ class CommunityBoardController < ApplicationController
   end
 
   def edit_complete
+    post =Board.find(params[:id])
+    post.board_type_id = params[:post_category]
+    post.title = params[:post_title]
+    post.text = params[:post_content]
+    if post.save
+      flash[:alert] = "수정되었습니다."
+      redirect_to "/#{post.board_type_id}"
+    else
+      flash[:alert] = post.errors.values.flatten.join(' ')
+      redirect_to :back
+    end
   end
 
   def delete_complete
-  end
+    post = Board.find(params[:id])
+    post.destroy
+    flash[:alert] = "삭제되었습니다."
+    redirect_to "/"
 
-  def posts_complete
   end
+  
+  def viewWork
+    @post = Board.find(params[:id])
+    Board.increment_counter(:read_count, params[:id] ) # hits increase
+  end
+  
+#  def listSpecificPageWork
+ #    @current_page = params[:current_page]
+  #   @totalCnt = Board.all.count
+   #  @totalPageList = getTotalPageList( @totalCnt, rowsPerPage)
+     #@boardList = Board.find_by_sql ["select ID,TITLE,MEMBER_ID, CREATED_AT, MAIL,TEXT,READ_COUNT from BOARD ORDER BY id desc limit %s offset %s", rowsPerPage, @current_page.to_i ==1 ? 0 : 2*(@current_page.to_i-1) ] 
+ # end
 end

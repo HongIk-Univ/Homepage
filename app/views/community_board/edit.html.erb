@@ -1,2 +1,25 @@
-<h1>CommunityBoard#edit</h1>
-<p>Find me in app/views/community_board/edit.html.erb</p>
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4 text-center">
+      <h3>수정하기</h3>
+
+      <form action="/community_board/edit_complete" method="post" enctype="multipart/form-data">
+         <input type="hidden" name="id" value="<%= @post.id %>">
+        <p>+ 분류
+        <select name="post_category">
+          <option value="cicposts">학과공지</option>
+          <option value="freeposts">자유게시판</option>
+          <option value="dataposts">자료실</option>
+          <option value="eventposts">행사/공모전</option>
+          <option value="faqposts">FAQ</option>
+        </select></p>
+        <p><input type="text" name="post_title" value="<%= @post.title %>"></p>
+        <p><textarea name="post_content" ><%= @post.text %></textarea></p>
+        <input type="submit" value="수정하기">
+      </form>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>
