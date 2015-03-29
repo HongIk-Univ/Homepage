@@ -1,7 +1,11 @@
 Cichomepage::Application.routes.draw do
+<<<<<<< HEAD
   get "community_board/viewWork"
   get "community_board/edit/:id" => 'community_board#edit'
   get "community_board/delete_complete/:id" => 'community_board#delete_complete'
+=======
+  ActiveAdmin.routes(self)
+>>>>>>> master
   get "useradd/signup"
   post "useradd/signup_complete"
   get "useradd/login"

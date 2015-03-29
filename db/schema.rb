@@ -11,10 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150325024255) do
 
   create_table "board_sub_types", force: true do |t|
     t.string   "board_type_id"
+=======
+ActiveRecord::Schema.define(version: 20150325101033) do
+
+  create_table "active_admin_comments", force: true do |t|
+    t.string   "namespace"
+    t.text     "body"
+    t.string   "resource_id",   null: false
+    t.string   "resource_type", null: false
+    t.integer  "author_id"
+    t.string   "author_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
+  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace"
+  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
+
+  create_table "board_sub_types", force: true do |t|
+    t.integer  "board_type_id"
+>>>>>>> master
     t.string   "title"
     t.integer  "status"
     t.datetime "created_at"
@@ -30,8 +52,12 @@ ActiveRecord::Schema.define(version: 20150325024255) do
 
   create_table "boards", force: true do |t|
     t.string   "member_id"
+<<<<<<< HEAD
     t.string   "writer"
     t.string   "board_type_id"
+=======
+    t.integer  "board_type_id"
+>>>>>>> master
     t.integer  "board_sub_type_id"
     t.datetime "date"
     t.string   "title"

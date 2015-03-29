@@ -45,3 +45,6 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+
+# activeadmin
+gem 'activeadmin', github: 'gregbell/active_admin'
